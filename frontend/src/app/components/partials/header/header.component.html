@@ -1,0 +1,31 @@
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand">Food Mine!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li *ngIf="!isAuth" class="nav-item">
+          <a routerLink="/login" class="nav-link">Login</a>
+        </li>
+        <li *ngIf="isAuth" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">{{ user.name }}</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/profil">Profile</a>
+            <a class="dropdown-item" routerLink="/payment">Orders</a>
+            <a class="dropdown-item" (click)="logout()">Logout</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/cart-page" class="nav-link">
+            Cart<span *ngIf="cartQuantity" class="badge badge-danger">{{ cartQuantity }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+

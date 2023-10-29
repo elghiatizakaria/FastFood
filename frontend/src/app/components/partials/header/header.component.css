@@ -1,0 +1,32 @@
+header {
+  border-bottom: 1px solid #e72929;
+}
+
+a.navbar-brand {
+  font-weight: bold;
+  padding: 1rem;
+  color: #af1313;
+}
+
+.navbar-nav .nav-link {
+  padding: 1rem;
+  color: #af1313;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+  background: #e72929;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.badge-danger {
+  background: #ff4d4d;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu {
+  background: whitesmoke;
+}
